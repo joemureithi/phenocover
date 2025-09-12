@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bavaria Wheat Field",
+        "description": "Wheat field location in Bavaria, Germany for phenology analysis"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [10.6276, 49.2076],
+          [10.6286, 49.2076],
+          [10.6286, 49.2086],
+          [10.6276, 49.2086],
+          [10.6276, 49.2076]
+        ]]
+      }
+    }
+  ]
+}
+
