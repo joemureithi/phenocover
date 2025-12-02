@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phenocover"
+version = "0.1.0"
+description = "Weather-Enhanced Wheat Phenology and Ground Cover Estimation Tool"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Joseph Gitahi", email = "joemureithi@live.com"}
+]
+maintainers = [
+    {name = "Joseph Gitahi", email = "joemureithi@live.com"}
+]
+keywords = [
+    "phenology",
+    "agriculture",
+    "wheat",
+    "NDVI",
+    "vegetation",
+    "remote-sensing",
+    "weather",
+    "GDD",
+    "crop-monitoring",
+    "precision-agriculture"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pandas>=1.3.0",
+    "numpy>=1.20.0",
+    "matplotlib>=3.3.0",
+    "seaborn>=0.11.0",
+    "scipy>=1.7.0",
+    "requests>=2.25.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/joemureithi/phenocover"
+Documentation = "https://github.com/joemureithi/phenocover/blob/main/README.md"
+Repository = "https://github.com/joemureithi/phenocover"
+"Bug Tracker" = "https://github.com/joemureithi/phenocover/issues"
+
+[project.scripts]
+phenocover = "phenocover.cli:app"
+
+[tool.setuptools]
+packages = ["phenocover"]
+
+[tool.setuptools.package-data]
+phenocover = ["docs/*.md"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--strict-markers --cov=phenocover --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

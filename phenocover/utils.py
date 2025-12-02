@@ -1,14 +1,19 @@
-# Utilities
+#!/usr/bin/env python
+
+'''Utility functions for Phenocover'''
 import os
 import sys
 import time
 import requests
-import json
 from functools import wraps
 from rich import print
-import xml.etree.ElementTree as ET
 from pathlib import Path
-from wheat-phenology-estimator.logging import get_logger
+from phenocover.logging import get_logger
+
+__author__ = "Joseph Gitahi"
+__email__ = "joemureithi@live.com"
+__maintainer__ = "Joseph Gitahi"
+__year__ = "2025"
 
 logger = get_logger(__name__)
 

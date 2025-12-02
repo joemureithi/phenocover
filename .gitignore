@@ -54,9 +54,16 @@ Thumbs.db
 # wheat_phenology_results.csv
 # wheat_phenology_analysis.png
 
+# Results directory
+results/
+
 # Logs
+logs/
 *.log
 
 # Temporary files
 *.tmp
 *.temp
+
+# Output DIR
+results/

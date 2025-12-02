@@ -1,0 +1,23 @@
+{
+    "ndvi_file": "NDVI_ Treatment Parcel - 0-data-2025-07-04 15_11_14.csv",
+    "sowing_date": "03.10.2023",
+    "harvest_date": "30.07.2024",
+    "geojson_file": "field_location.geojson",
+    "fvc_method": "seasonal",
+    "interpolation_method": "balanced",
+    "output_dir": "./results",
+    "results_csv": "results/phenology_results.csv",
+    "visualization_png": "results/phenology_analysis.png",
+    "analysis_options": {
+        "estimate_fvc": true,
+        "interpolate_ndvi": true,
+        "estimate_growth_stages": true,
+        "create_visualization": true,
+        "save_results": true,
+        "generate_summary": true
+    },
+    "weather_integration": {
+        "enabled": true,
+        "source": "Open-Meteo API"
+    }
+}
