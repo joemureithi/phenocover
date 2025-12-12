@@ -34,11 +34,11 @@ setup(
     name="phenocover",
     version="1.0.0",
     author="Joseph Gitahi",
-    author_email="joemureithi@live.com",
+    author_email="joseph.gitahi@tum.de",
     description="Weather-Enhanced Wheat Phenology and Ground Cover Estimation Tool",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/joemureithi/phenocover",
+    url="https://github.com/tum-gis/phenocover",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -77,9 +77,9 @@ setup(
         ],
     },
     project_urls={
-        "Bug Reports": "https://github.com/joemureithi/phenocover/issues",
-        "Source": "https://github.com/joemureithi/phenocover",
-        "Documentation": "https://github.com/joemureithi/phenocover/blob/main/README.md",
+        "Bug Reports": "https://github.com/tum-gis/phenocover/issues",
+        "Source": "https://github.com/tum-gis/phenocover",
+        "Documentation": "https://github.com/tum-gis/phenocover/blob/main/README.md",
     },
     zip_safe=False,
 )

@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Joseph Gitahi", email = "joemureithi@live.com"}
+    {name = "Joseph Gitahi", email = "joseph.gitahi@tum.de"}
 ]
 maintainers = [
-    {name = "Joseph Gitahi", email = "joemureithi@live.com"}
+    {name = "Joseph Gitahi", email = "joseph.gitahi@tum.de"}
 ]
 keywords = [
     "phenology",
@@ -62,10 +62,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/joemureithi/phenocover"
-Documentation = "https://github.com/joemureithi/phenocover/blob/main/README.md"
-Repository = "https://github.com/joemureithi/phenocover"
-"Bug Tracker" = "https://github.com/joemureithi/phenocover/issues"
+Homepage = "https://github.com/tum-gis/phenocover"
+Documentation = "https://github.com/tum-gis/phenocover/blob/main/README.md"
+Repository = "https://github.com/tum-gis/phenocover"
+"Bug Tracker" = "https://github.com/tum-gis/phenocover/issues"
 
 [project.scripts]
 phenocover = "phenocover.cli:app"

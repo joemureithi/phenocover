@@ -22,7 +22,7 @@ A comprehensive scientific tool for analyzing wheat phenology and estimating gro
 
 ```bash
 # Clone the repository
-git clone https://github.com/joemureithi/phenocover.git
+git clone https://github.com/tum-gis/phenocover.git
 cd phenocover
 
 # Install the package
