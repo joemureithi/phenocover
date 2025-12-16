@@ -12,7 +12,7 @@ This module provides a centralized logging configuration with support for:
 """
 
 __author__ = "Joseph Gitahi"
-__email__ = "joemureithi@live.com"
+__email__ = "joseph.gitahi@tum.de"
 __maintainer__ = "Joseph Gitahi"
 __year__ = "2025"
 

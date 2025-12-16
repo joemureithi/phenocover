@@ -128,12 +128,12 @@ def phenology_analyzer(
         "--interpolation-method",
         help="NDVI interpolation method (balanced, linear, or cubic)",
     ),
-    output_dir: Optional[str] = typer.Option(
-        None,
-        "--output-dir",
-        "-o",
-        help="Output directory for results",
-    ),
+    # output_dir: Optional[str] = typer.Option(
+    #     None,
+    #     "--output-dir",
+    #     "-o",
+    #     help="Output directory for results",
+    # ),
     results_csv: Optional[str] = typer.Option(
         None,
         "--results-csv",
@@ -169,8 +169,8 @@ def phenology_analyzer(
             params['harvest_date'] = harvest_date
         if geojson_file:
             params['geojson_file'] = geojson_file
-        if output_dir:
-            params['output_dir'] = output_dir
+        # if output_dir:
+        #     params['output_dir'] = output_dir
         if results_csv:
             params['results_csv'] = results_csv
         if visualization_png:
@@ -181,23 +181,22 @@ def phenology_analyzer(
 
         # Set defaults for output filenames if not provided
         # Create results directory if it doesn't exist
-        results_dir = Path('results')
-        results_dir.mkdir(exist_ok=True)
+        # results_dir = Path('results')
+        # results_dir.mkdir(exist_ok=True)
 
         if 'results_csv' not in params or params['results_csv'] is None:
-            params['results_csv'] = str(results_dir / 'phenology_results.csv')
+            params['results_csv'] = str('phenology_results.csv')
         elif not Path(params['results_csv']).is_absolute() and '/' not in params['results_csv'] and '\\' not in params['results_csv']:
             # If it's just a filename (no path), put it in results
-            params['results_csv'] = str(results_dir / params['results_csv'])
+            params['results_csv'] = str(params['results_csv'])
 
         if 'visualization_png' not in params or params['visualization_png'] is None:
             params['visualization_png'] = str(
-                results_dir / 'phenology_analysis.png')
+                'phenology_analysis.png')
         elif not Path(params['visualization_png']).is_absolute() and '/' not in params['visualization_png'] and '\\' not in params['visualization_png']:
             # If it's just a filename (no path), put it in results
             params['visualization_png'] = str(
-                results_dir / params['visualization_png'])
-
+                params['visualization_png'])
         # Validate required parameters
         required_params = ['ndvi_file', 'sowing_date',
                            'harvest_date', 'geojson_file']
